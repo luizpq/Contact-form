@@ -27,12 +27,17 @@ legend{
 }
 
 section{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-flow: column nowrap;
     position: relative;
     background-color: white;
-    width: 90vw;
+    width: 90%;
     margin: auto;
+    margin-top: 20px;
     padding: 15px;
-    
+    border-radius: 10px;
 }
 
 section label{
@@ -44,24 +49,43 @@ input{
     border: 1px solid rgb(100, 99, 99);
     border-radius: 5px;
     margin: 8px 0px;
+    width: 350px;
+    padding-left: 4px;
 }
 
 #alrad1{
     position: absolute;
-    right: 68%;
-    top: 56.8%;
+    right: 67%;
+    top: 57.3%;
 }
 
 #alrad2{
     position: absolute;
-    right: 68%;
-    top: 48.5%;
+    right: 66%;
+    top: 51%;
+}
+
+#alcheck{
+    position: absolute;
+    top: 80%;
+    right: 32%;
 }
 
 .borda{
+    display: flex;
+    align-items: center;
+
     border: 1px solid rgb(100, 99, 99);
     border-radius: 5px;
     margin: 4px 0px;
     padding-left: 3px;
     width: 165px;
+    max-height: 30px;
 }
+
+.checkbox{
+    width: 15px;
+    max-height: 20px;
+}
+
+

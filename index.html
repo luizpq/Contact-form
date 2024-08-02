@@ -13,11 +13,12 @@
   <section>
 
   <legend>Contact Us</legend>
-  <form action="#" autocomplete="on" method="post">
+  <form action="#" autocomplete="on" method="post" novalidate>
 
     <p>
-      <label for="ipnome">First Name *</label><br>
+      <label for="inome">First Name *</label><br>
       <input type="text" name="nome" id="inome" required autocomplete="name">
+      <div class="msgerro" style="color: rgb(209, 3, 3);"></div>
     </p>
     
       <p>
@@ -25,22 +26,26 @@
         <input type="text" name="sobre" id="isobre" required autocomplete="name">
       </p>
 
-  <label for="iemail">Email Address *</label><br>
-  <input type="email" name="email" id="iemail" required autocomplete="email">
-  Please enter a valid email address
+  <p>
+    <label for="iemail">Email Address *</label><br>
+    <input type="email" name="email" id="iemail" required autocomplete="email">
+  </p>
+  <!--Please enter a valid email address-->
 
   Query type *<br>
   <p class="borda">  
-    <input type="radio" name="query" id="iradio1">
+    <input class="checkbox" type="radio" name="query" id="iradio1" required>
     <label for="iradio1"><p id="alrad1">General Enquiry</p></label>
     <p class="borda"> 
-      <input type="radio" name="query" id="iradio2">
+      <input class="checkbox" type="radio" name="query" id="iradio2" required>
       <p id="alrad2"><label for="iradio2">Support Request</label></p><br>
     </p>
-    Please select a query type
+
+    <!-- Please select a query type -->
+
   </p>
 
-  <p>
+  <p id="centralizar">
     <label for="imsg">Mensagem *</label><br>
     <input type="text" name="msg" id="imsg" list="ilistm" required>
     <datalist id="ilistm">
@@ -49,24 +54,23 @@
   </p>
 
   <p>
-    <input type="checkbox" name="aceitar" id="iaceitar" required>
-    <label for="iaceitar">I consent to being contacted by the team</label>
-  </p>
+    <input class="checkbox" type="checkbox" name="aceitar" id="iaceitar" required><p id="alcheck"> I consent to being contacted by the team </p>
   To submit this form, please consent to being contacted
 
   <p>
-    <input type="submit" value="Submit"></input>
+    <input type="submit" value="Submit" onclick="clickbtn()"></input>
   </p>
   </form>
 
   </section>
 
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
+  <!-- Message Sent!
+  Thanks for completing the form. We'll be in touch soon! -->
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
