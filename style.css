@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "italica";
+    src: url(fonts/Karla-Italic-VariableFont_wght.ttf) format(truetype);
+}
+
+@font-face {
+    font-family: "titulo";
+    src: url(fonts/Karla-VariableFont_wght.ttf) format(truetype);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;   
+}
+
+body{
+    background-color:  #E2F1E7;
+}
+
+legend{
+    font-size: 2em;
+    margin-bottom: 10px;
+    font-family: "titulo", Arial, Helvetica, sans-serif;
+}
+
+section{
+    position: relative;
+    background-color: white;
+    width: 90vw;
+    margin: auto;
+    padding: 15px;
+    
+}
+
+section label{
+   font-family: "italica", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+input{
+    min-height: 30px;
+    border: 1px solid rgb(100, 99, 99);
+    border-radius: 5px;
+    margin: 8px 0px;
+}
+
+#alrad1{
+    position: absolute;
+    right: 68%;
+    top: 56.8%;
+}
+
+#alrad2{
+    position: absolute;
+    right: 68%;
+    top: 48.5%;
+}
+
+.borda{
+    border: 1px solid rgb(100, 99, 99);
+    border-radius: 5px;
+    margin: 4px 0px;
+    padding-left: 3px;
+    width: 165px;
+}

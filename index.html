@@ -1,45 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Contact form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
+ 
 </head>
 <body>
 
-  Contact Us
+  <section>
 
-  First Name
-  This field is required
+  <legend>Contact Us</legend>
+  <form action="#" autocomplete="on" method="post">
 
-  Last Name
-  This field is required
+    <p>
+      <label for="ipnome">First Name *</label><br>
+      <input type="text" name="nome" id="inome" required autocomplete="name">
+    </p>
+    
+      <p>
+        <label for="isobre">Last Name *</label><br>
+        <input type="text" name="sobre" id="isobre" required autocomplete="name">
+      </p>
 
-  Email Address
+  <label for="iemail">Email Address *</label><br>
+  <input type="email" name="email" id="iemail" required autocomplete="email">
   Please enter a valid email address
-  This field is required
 
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
+  Query type *<br>
+  <p class="borda">  
+    <input type="radio" name="query" id="iradio1">
+    <label for="iradio1"><p id="alrad1">General Enquiry</p></label>
+    <p class="borda"> 
+      <input type="radio" name="query" id="iradio2">
+      <p id="alrad2"><label for="iradio2">Support Request</label></p><br>
+    </p>
+    Please select a query type
+  </p>
 
-  Message
-  This field is required
+  <p>
+    <label for="imsg">Mensagem *</label><br>
+    <input type="text" name="msg" id="imsg" list="ilistm" required>
+    <datalist id="ilistm">
+      
+    </datalist>
+  </p>
 
-  I consent to being contacted by the team
+  <p>
+    <input type="checkbox" name="aceitar" id="iaceitar" required>
+    <label for="iaceitar">I consent to being contacted by the team</label>
+  </p>
   To submit this form, please consent to being contacted
 
-  Submit
+  <p>
+    <input type="submit" value="Submit"></input>
+  </p>
+  </form>
+
+  </section>
 
   Message Sent!
   Thanks for completing the form. We'll be in touch soon!
