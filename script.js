@@ -8,16 +8,27 @@
     var check = document.getElementById('iaceitar')
     var msgerro = document.querySelector('div.msgerro')*/
     
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', () => {
+        const botao = document.getElementById('botao')
         var name = document.getElementById('inome')
+        let fname = String(name.value)
         var form = document.querySelector('form')
-        form.addEventListener('submit', function(event) {
-           
-            if (name.value.trim() == '') {
+
+        botao.addEventListener('click', () => {
+            if (fname.value.trim().length == "") {
                 msgerro.innerHTML = `This field is required`
-                event.preventDefault()
-            }       
+                document.preventDefault()  
+            } 
+          
         })
     })
+
+ 
+ 
+        
+
+      
+
+    }
 
    
