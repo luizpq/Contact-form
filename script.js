@@ -11,12 +11,11 @@
     document.addEventListener('DOMContentLoaded', () => {
         const botao = document.getElementById('botao')
         var name = document.getElementById('inome')
-        let fname = String(name.value)
         var form = document.querySelector('form')
 
         botao.addEventListener('click', () => {
-            if (fname.value.trim().length == "") {
-                msgerro.innerHTML = `This field is required`
+            if (name.value == '') {
+                msgerro.innerHTML = `This field is requeired`
                 document.preventDefault()  
             } 
           
