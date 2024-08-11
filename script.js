@@ -14,10 +14,7 @@
         var form = document.querySelector('form')
 
         botao.addEventListener('click', () => {
-            if (name.value == '') {
-                msgerro.innerHTML = `This field is requeired`
-                document.preventDefault()  
-            } 
+           
           
         })
     })
