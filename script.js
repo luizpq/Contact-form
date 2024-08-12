@@ -1,30 +1,33 @@
- /*function clickbtn() {
+// Elemenst
    
-    
-    var sobre = document.getElementById('isobre')
-    var email = document.getElementById('iemail')
-    var query = document.getElementsByName('query')
-    var msg = document.getElementById('imsg')
-    var check = document.getElementById('iaceitar')
-    var msgerro = document.querySelector('div.msgerro')*/
-    
-    document.addEventListener('DOMContentLoaded', () => {
-        const botao = document.getElementById('botao')
-        var name = document.getElementById('inome')
-        var form = document.querySelector('form')
+const name = document.getElementById('inome')
+const form = document.querySelector('form')
+const sobre = document.getElementById('isobre')
+const email = document.getElementById('iemail')
+const query = document.getElementsByName('query')
+const msg = document.getElementById('imsg')
+const check = document.getElementById('iaceitar')
+const msgerro = document.querySelector('div.msgerro')
+const botao = document.getElementById('botao')
 
-        botao.addEventListener('click', () => {
-           
-          
-        })
+
+
+// Funções
+const error = (e) => {
+    if (inome == '') {
+         e.preventDefault()
+    }
+}
+
+ 
+// Eventos   
+
+    botao.addEventListener('click', () => {
+       error()
+      
     })
-
- 
- 
-        
-
       
 
-    }
+    
 
    
