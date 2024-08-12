@@ -14,16 +14,16 @@ const botao = document.getElementById('botao')
 
 // Funções
 const error = (e) => {
-    if (inome == '') {
-         e.preventDefault()
+    if (e == '') {
+         document.preventDefault()
     }
 }
 
  
 // Eventos   
 
-    botao.addEventListener('click', () => {
-       error()
+    botao.addEventListener('submit', () => {
+       error(inome)
       
     })
       
