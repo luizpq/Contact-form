@@ -16,18 +16,27 @@ const botao = document.getElementById('botao')
 true 
 false
 const error = (e) => {
+<<<<<<< HEAD
     if (e.value == '') {
         return true
+=======
+    if (e == '') {
+         document.preventDefault()
+>>>>>>> 8264341e15934b752aad60aa39a0023314f973c9
     }
 }
  
 // Eventos   
 
-    botao.addEventListener('submit', (e) => {
-        if (error(nome) == true) {
-            e.preventDefault()
-        }
+<<<<<<< HEAD
+    
        
+=======
+    botao.addEventListener('submit', () => {
+       if (error(inome)) {
+            document.preventDefault()
+       }
+>>>>>>> 8264341e15934b752aad60aa39a0023314f973c9
       
     })
     
