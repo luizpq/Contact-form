@@ -13,16 +13,20 @@ const botao = document.getElementById('botao')
 
 
 // Funções
+true 
+false
 const error = (e) => {
-    if (e == '') {
-        return document.preventDefault()
+    if (e.value == '') {
+        return true
     }
 }
  
 // Eventos   
 
-    botao.addEventListener('submit', () => {
-        error(nome)
+    botao.addEventListener('submit', (e) => {
+        if (error(nome) == true) {
+            e.preventDefault()
+        }
        
       
     })
