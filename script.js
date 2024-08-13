@@ -1,7 +1,7 @@
 // Elemenst
    
-const name = document.getElementById('inome')
-const form = document.querySelector('form')
+const nome = document.querySelector('#inome')
+const form = document.querySelector('#form')
 const sobre = document.getElementById('isobre')
 const email = document.getElementById('iemail')
 const query = document.getElementsByName('query')
@@ -14,20 +14,18 @@ const botao = document.getElementById('botao')
 
 // Funções
 const error = (e) => {
-    if (inome == '') {
-         e.preventDefault()
+    if (e == '') {
+        return document.preventDefault()
     }
 }
-
  
 // Eventos   
 
-    botao.addEventListener('click', () => {
-       error()
+    botao.addEventListener('submit', () => {
+        error(nome)
+       
       
     })
-      
-
     
 
    
