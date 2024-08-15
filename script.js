@@ -7,38 +7,31 @@ const email = document.getElementById('iemail')
 const query = document.getElementsByName('query')
 const msg = document.getElementById('imsg')
 const check = document.getElementById('iaceitar')
-const msgerro = document.querySelector('div.msgerro')
+const erromsg = document.querySelector('div.msgerro')
 const botao = document.getElementById('botao')
+const nomevl = nome.value
 
 
-
-// Funções
-true 
-false
-const error = (e) => {
-<<<<<<< HEAD
-    if (e.value == '') {
-        return true
-=======
-    if (e == '') {
-         document.preventDefault()
->>>>>>> 8264341e15934b752aad60aa39a0023314f973c9
-    }
+// Functions
+const msgerro = () => {
+        const pError = document.createElement('p')
+    
+          pError.innerText = 'This field is requiried'
+          erromsg.appendChild(pError)
 }
- 
-// Eventos   
 
-<<<<<<< HEAD
+const verificaInput = () => {
     
-       
-=======
-    botao.addEventListener('submit', () => {
-       if (error(inome)) {
-            document.preventDefault()
-       }
->>>>>>> 8264341e15934b752aad60aa39a0023314f973c9
-      
-    })
-    
+}
 
-   
+
+
+// Events   
+
+botao.addEventListener('click', (e) => {
+
+    
+    if (nomevl === '')
+        msgerro()
+        e.preventDefault()
+})
