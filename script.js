@@ -11,13 +11,21 @@ const erromsg = document.querySelector('div.msgerro')
 const botao = document.getElementById('botao')
 const nomevl = nome.value
 
+const obj = {
+    inome: nome,
+    isobre: sobre
+}
 
 // Functions
-const msgerro = () => {
-        const pError = document.createElement('p')
-    
-          pError.innerText = 'This field is requiried'
-          erromsg.appendChild(pError)
+const eviar = () => {
+   
+
+    const data = Object.fromEntries(new FormData(form).entries());
+    const {inome, sobre} = data
+
+    if (inome === '' || isobre === '') {
+        .classlist.remove('notVisible')
+    }
 }
 
 const verificaInput = () => {
@@ -29,9 +37,6 @@ const verificaInput = () => {
 // Events   
 
 botao.addEventListener('click', (e) => {
-
-    
-    if (nomevl === '')
-        msgerro()
-        e.preventDefault()
+    e.preventDefault()
+    enviar()
 })

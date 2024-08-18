@@ -88,4 +88,7 @@ input{
     max-height: 20px;
 }
 
+.notVisible {
+    display: none;
+}
 
