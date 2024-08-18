@@ -1,42 +1,29 @@
-// Elemenst
-   
-const nome = document.querySelector('#inome')
-const form = document.querySelector('#form')
-const sobre = document.getElementById('isobre')
-const email = document.getElementById('iemail')
-const query = document.getElementsByName('query')
-const msg = document.getElementById('imsg')
-const check = document.getElementById('iaceitar')
-const erromsg = document.querySelector('div.msgerro')
-const botao = document.getElementById('botao')
-const nomevl = nome.value
-
-const obj = {
-    inome: nome,
-    isobre: sobre
-}
+// Elements
+const nome = document.querySelector('#inome');
+const form = document.querySelector('form');
+const sobre = document.getElementById('isobre');
+const email = document.getElementById('iemail');
+const query = document.getElementsByName('query');
+const msg = document.getElementById('imsg');
+const check = document.getElementById('iaceitar');
+const erromsg = document.querySelector('div.msgerro'); // Verifique se a classe está correta
+const botao = document.getElementById('botao');
 
 // Functions
-const eviar = () => {
-   
+const enviar = () => {
+    const inome = nome.value.trim();
+    console.log('Valor do nome:', inome); // Adicione esta linha para depuração
 
-    const data = Object.fromEntries(new FormData(form).entries());
-    const {inome, sobre} = data
-
-    if (inome === '' || isobre === '') {
-        .classlist.remove('notVisible')
+    if (inome === '') {
+        erromsg.style.display = 'block';
+    } else {
+        erromsg.style.display = 'none';
     }
-}
-
-const verificaInput = () => {
-    
-}
+};
 
 
-
-// Events   
-
+// Events
 botao.addEventListener('click', (e) => {
-    e.preventDefault()
-    enviar()
-})
+    e.preventDefault();
+    enviar();
+});
