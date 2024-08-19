@@ -6,24 +6,47 @@ const email = document.getElementById('iemail');
 const query = document.getElementsByName('query');
 const msg = document.getElementById('imsg');
 const check = document.getElementById('iaceitar');
-const erromsg = document.querySelector('div.msgerro'); // Verifique se a classe está correta
+const erromsg = document.querySelector('div.msgerro'); 
 const botao = document.getElementById('botao');
+const inputs = [nome, sobre, email]
+
 
 // Functions
-const enviar = () => {
+const enviar = (e) => {
+    e.preventDefault()
+
     const inome = nome.value.trim();
     console.log('Valor do nome:', inome); // Adicione esta linha para depuração
-
-    if (inome === '') {
-        erromsg.style.display = 'block';
-    } else {
-        erromsg.style.display = 'none';
-    }
+    if (verificaErro()) {
+        alert('Thanks for completing the form. we`ll be in the soon')
+    } 
+    
 };
 
+const verificaErro = () => {
+    let temErro = true
+
+    inputs.forEach(input => {
+        if (input.value.trim() === '') {
+   
+            temErro = true
+        } else {
+            temErro = false
+        }
+    })
+
+    if (temErro) {
+        erromsg.style.display = 'block'
+        erromsg.textContent = 'This field is required'
+    } else {
+        erromsg.style.display = 'none'
+        erromsg.textContent = ''
+    }
+    
+    return !temErro
+    
+}
+ 
 
 // Events
-botao.addEventListener('click', (e) => {
-    e.preventDefault();
-    enviar();
-});
+form.addEventListener('submit', enviar)
