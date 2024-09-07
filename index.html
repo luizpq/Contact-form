@@ -11,53 +11,80 @@
 </head>
 <body>
 
+  <div class="alert hidden" id="js-alert">
+      <div class="alert-content">
+        <h1>Message Sent!</h1>
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+      </div>
+
+  </div>
+
   <section>
 
   <legend>Contact Us</legend>
   <form action="cadastro.php" autocomplete="on" method="post" novalidate>
 
-    <p>
-      <label for="inome">First Name *</label><br>
-      <input type="text" name="nome" id="inome" required autocomplete="name">
-      <div class="msgerro">This field is required</div>
-    </p>
+    <div class="left-box">
+      <label for="inome">
+        First Name *
+        <input type="text" name="nome" id="inome" required autocomplete="name">
+        </label>
+      
+      <div class="msgerro" id="error-name"></div>
+    </div>
     
-      <p>
-        <label for="isobre">Last Name *</label><br>
+      <div class="left-box">
+        <label for="isobre">Last Name *</label>
         <input type="text" name="sobre" id="isobre" required autocomplete="name">
-        <div class="msgerro">This field is required</div>
-      </p>
+        <div class="msgerro" id="error-last-name">
+      </div>
 
-  <p>
-    <label for="iemail">Email Address *</label><br>
+  <div class="left-box">
+    <label for="iemail">Email Address *</label>
     <input type="email" name="email" id="iemail" required autocomplete="email">
-  </p>
+    <div class="msgerro" id="error-email"></div>
+  </div>
   <!--Please enter a valid email address-->
 
-  Query type *<br>
-  <p class="borda">  
-    <input class="checkbox" type="radio" name="query" id="iradio1" required>
-    <label for="iradio1"><p id="alrad1">General Enquiry</p></label>
-    <p class="borda"> 
+
+  
+    <div class="radio-group">
+      <p>Query type *</p>
+    <label for="iradio1">
+      <input class="checkbox" type="radio" name="query" id="iradio1" required>
+      General Enquiry
+      </label>
+
+      <label for="iradio2">
+
       <input class="checkbox" type="radio" name="query" id="iradio2" required>
-      <p id="alrad2"><label for="iradio2">Support Request</label></p><br>
-    </p>
+      Support Request</label>
+    </div>
+
+      <div class="msgerro" id="error-radio"></div>
+   
 
     <!-- Please select a query type -->
 
-  </p>
-
-  <p id="centralizar">
-    <label for="imsg">Mensagem *</label><br>
+  <div class="left-box">
+    <label for="imsg">Mensagem *</label>
     <input type="text" name="msg" id="imsg" list="ilistm" required>
     <datalist id="ilistm">
       
     </datalist>
-  </p>
+    <div class="msgerro" id="error-message"></div>
+  </div>
+  
 
-  <p>
-    <input class="checkbox" type="checkbox" name="aceitar" id="iaceitar" required><p id="alcheck"> I consent to being contacted by the team </p>
-  To submit this form, please consent to being contacted
+  <div class="center-check-box">
+    <label for="iaceitar">
+      <input class="checkbox" type="checkbox" name="aceitar" id="iaceitar" required>
+      consent to being contacted by the team
+    </label>
+    <div class="msgerro" id="error-check-box"></div> 
+  </div>
+  
+
 
   <p>
     <input type="submit" value="Submit" id="botao"></input>
