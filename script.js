@@ -4,7 +4,7 @@ const form = document.querySelector('form');
 const inputName = document.querySelector('#inome');
 const inputLastName = document.getElementById('isobre');
 const inputEmail = document.getElementById('iemail');
-const inputQuery = document.querySelectorAll('query')
+const inputQuery = document.querySelectorAll('input[name="query"]')
 const inputMessage = document.getElementById('imsg')
 const inputCheckBox = document.getElementById('iaceitar')
 // Error Div
@@ -22,8 +22,6 @@ const enviar = (e) => {
     e.preventDefault();
 
     if (verificaErro()) {
-        alert('Thanks for completing the form. We\'ll be in touch soon.');
-    } else {
         showAlert()
     }
 };
@@ -37,46 +35,61 @@ const verificaErro = () => {
     errorEmail.textContent = ''
     errorRadio.textContent = ''
     errorCheckBox.textContent = ''
-   
+    errorMessage.textContent = ''
 
     // Check inputName
     if (inputName.value.trim() === '') {
-        errorName.textContent = 'This field is required'; // Corrigido de 'requiried' para 'required'
+        errorName.textContent = 'This field is required';
+        inputName.classList.add('error-border')
         temErro = true;
     }
 
     // Check inputLastName
     if (inputLastName.value.trim() === '') {
-        errorLastName.textContent = 'This field is required'; // Corrigido de 'requiried' para 'required'
+        errorLastName.textContent = 'This field is required'; 
+        inputLastName.classList.add('error-border')
         temErro = true;
     }
 
+    // Check inputEmail
+
     if (inputEmail.value.trim() === '') {
         errorEmail.textContent = 'This field is required'
+        inputEmail.classList.add('error-border')
         temErro = true
     }
 
-    let selected = false
-    inputQuery.forEach(radio => {
-        if (radio.checked) {
-            selected = true
-        }
-    }) 
+    // Check inputRadio
 
-    if (!selected) {
+    let checkedCount = 0
+    inputQuery.forEach(radios => {
+        if (radios.checked) {
+            checkedCount++
+        }
+    })
+
+    if (checkedCount < 1) {
         errorRadio.textContent = 'Please select a query type'
         temErro = true
     } else {
         errorRadio.textContent = ''
+        temErro = false
     }
+
+    // Check inputMessage
 
     if (inputMessage.value.trim() === '') {
         errorMessage.textContent = 'This field is required'
+        inputMessage.classList.add('error-border')
         temErro = true
     }
 
+    // Check inputCheckBox
+
     if (!inputCheckBox.checked) {
         errorCheckBox.textContent = 'To submit this form, please consent to being contacted'
+        inputCheckBox.classList.add('error-border')
+        temErro = true
     }
 
     return !temErro;

@@ -68,6 +68,12 @@ input{
     align-items: center;
     justify-content: left;
     margin: -15px 0px;
+
+    border: 1px solid rgb(100, 99, 99);
+    border-radius: 5px;
+    height: 32px;
+    margin-top: 4px;
+    width: 350px;
 }
 
 .radio-group input[type="radio"] {
@@ -78,6 +84,7 @@ input{
     display: flex;
     flex-direction: column;
     justify-content: left;
+   
 }
 
 .center-check-box label {
@@ -92,7 +99,6 @@ input{
 }
 
 .left-box label {
-   
     margin-bottom: 5px;
 }
 
@@ -100,16 +106,33 @@ input{
 .checkbox{
     width: 15px;
     max-height: 20px;
+    margin-right: 5px;
 }
 
 div.msgerro {
     color: rgb(209, 3, 3);
-    margin-top: 3px;
+    margin: 3px 0px;
 }
 
 .hidden {
     display: none;
 }
 
+#botao {
+    background-color: rgb(12, 123, 101);
+    color: white;
+    padding: 12px 0px;
+    
+}
 
+.error-border {
+    border: 1px solid rgb(175, 5, 5);
+    
+}
 
+h1.checkbox-title {
+    font-size: 16px;
+    font-weight: normal;
+    font-family: "italica", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom: 8px;
+}

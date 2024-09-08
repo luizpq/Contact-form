@@ -27,8 +27,9 @@
     <div class="left-box">
       <label for="inome">
         First Name *
+      </label>
         <input type="text" name="nome" id="inome" required autocomplete="name">
-        </label>
+        
       
       <div class="msgerro" id="error-name"></div>
     </div>
@@ -49,7 +50,7 @@
 
   
     <div class="radio-group">
-      <p>Query type *</p>
+      <h1 class="checkbox-title">Query type *</h1>
     <label for="iradio1">
       <input class="checkbox" type="radio" name="query" id="iradio1" required>
       General Enquiry
@@ -69,7 +70,7 @@
   <div class="left-box">
     <label for="imsg">Mensagem *</label>
     <input type="text" name="msg" id="imsg" list="ilistm" required>
-    <datalist id="ilistm">
+    <datalist id="ilistm" >
       
     </datalist>
     <div class="msgerro" id="error-message"></div>
@@ -93,12 +94,5 @@
 
   </section>
 
-  <!-- Message Sent!
-  Thanks for completing the form. We'll be in touch soon! -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>
