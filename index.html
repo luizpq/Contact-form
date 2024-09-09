@@ -29,22 +29,25 @@
         First Name *
       </label>
         <input type="text" name="nome" id="inome" required autocomplete="name">
-        
-      
       <div class="msgerro" id="error-name"></div>
     </div>
     
-      <div class="left-box">
-        <label for="isobre">Last Name *</label>
-        <input type="text" name="sobre" id="isobre" required autocomplete="name">
-        <div class="msgerro" id="error-last-name">
-      </div>
+      
+        <div class="center-input">
+          <label for="isobre">Last Name *</label>
+          <input type="text" name="sobre" id="isobre" required autocomplete="name">
+          <div class="msgerro" id="error-last-name"></div>
+        </div>
+    
+      
 
-  <div class="left-box">
-    <label for="iemail">Email Address *</label>
-    <input type="email" name="email" id="iemail" required autocomplete="email">
-    <div class="msgerro" id="error-email"></div>
-  </div>
+ 
+      <div class="center-input">
+      <label for="iemail">Email Address *</label>
+      <input type="email" name="email" id="iemail" required autocomplete="email">
+      <div class="msgerro" id="error-email"></div>
+    </div>
+  
   <!--Please enter a valid email address-->
 
 
@@ -69,12 +72,11 @@
 
   <div class="left-box">
     <label for="imsg">Mensagem *</label>
-    <input type="text" name="msg" id="imsg" list="ilistm" required>
-    <datalist id="ilistm">
-      
-    </datalist>
+
+    <textarea name="msg" id="imsg" rows="10" cols="30"></textarea>
     <div class="msgerro" id="error-message"></div>
   </div>
+
   
 
   <div class="center-check-box">
