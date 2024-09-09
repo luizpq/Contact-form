@@ -20,21 +20,15 @@ body{
     background-color:  #E2F1E7;
 }
 
-p {
-    margin-bottom: 10px;
-}
-
 legend{
     font-size: 2em;
     margin-bottom: 10px;
     font-family: "titulo", Arial, Helvetica, sans-serif;
+    margin-left: 15px
+  
 }
 
 section{
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-flow: column nowrap;
     position: relative;
     background-color: white;
     width: 90%;
@@ -46,6 +40,7 @@ section{
 
 section label{
    font-family: "italica", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   
 }
 
 input{
@@ -55,6 +50,7 @@ input{
     margin: 8px 0px;
     width: 74vw;
     padding-left: 4px;
+    margin: auto;
 }
 
 .radio-group {
@@ -71,27 +67,14 @@ input{
 
     border: 1px solid rgb(100, 99, 99);
     border-radius: 5px;
-    height: 32px;
+    min-height: 35px;
     margin-top: 4px;
-    width: 350px;
+    width: 74vw;
 }
 
 .radio-group input[type="radio"] {
     margin-left: 10px;
 }
- 
-.center-check-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-   
-}
-
-.center-check-box label {
-    display: flex;
-    align-items: center;
-}
-
 
 div.left-box {
     display: flex;
@@ -102,12 +85,7 @@ div.left-box {
 
 div.left-box label {
     margin-bottom: 5px;
-}
-
-.center-input {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin-left: 18px;
 }
 
 .checkbox{
@@ -116,9 +94,31 @@ div.left-box label {
     margin-right: 5px;
 }
 
+.center-check-box {
+    display: flex;
+    flex-wrap: wrap;
+
+    height: 100%;
+}
+
+.center-check-box label {
+    display: flex;
+    align-items: center;
+   
+}
+
+textarea {
+    width: 74vw;
+    padding: 4px 6px;
+    margin: auto;
+    resize: none;
+    border-radius: 5px;
+}
+
 div.msgerro {
     color: rgb(209, 3, 3);
-    margin: 3px 0px;
+    margin: 8px 0px;
+    margin-left: 17.5px;
 }
 
 .hidden {
@@ -126,6 +126,9 @@ div.msgerro {
 }
 
 #botao {
+    display: flex;
+    align-items: center;
+
     background-color: rgb(12, 123, 101);
     color: white;
     padding: 12px 0px;
@@ -141,4 +144,5 @@ h1.checkbox-title {
     font-weight: normal;
     font-family: "italica", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin-bottom: 8px;
+    margin-left: 18px;
 }
