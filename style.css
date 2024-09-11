@@ -43,37 +43,73 @@ section label{
    
 }
 
-input{
+input {
     min-height: 35px;
-    border: 1px solid rgb(100, 99, 99);
+    border: 1.5px solid rgb(100, 99, 99);
     border-radius: 5px;
     margin: 8px 0px;
     width: 74vw;
     padding-left: 4px;
     margin: auto;
+    outline: none;
+}
+
+input:focus {
+    border-color: green;
+}
+
+input[type="radio"] {
+   display: none;
 }
 
 .radio-group {
     display: flex;
-    flex-direction: column;
-    align-items: left;
+    flex-flow: column nowrap;
+    align-items: center;
+    
 }
 
-.radio-group label {
+/* Estilo da borda e do ponto do rádio personalizado */
+.radio-group input[type="radio"] + span {
+    display: flex;
+ 
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    margin-right: -10px;
+    border: 2px solid #ccc; /* Cor padrão da borda */
+    border-radius: 50%; /* Forma circular */
+    background-color: #fff; /* Cor de fundo do círculo */
+    transition: border-color 0.3s; /* Transição suave da cor da borda */
+}
+
+.border-radio {
     display: flex;
     align-items: center;
-    justify-content: left;
-    margin: -15px 0px;
 
-    border: 1px solid rgb(100, 99, 99);
+    border: 1.5px solid  rgb(100, 99, 99);
     border-radius: 5px;
+    margin-bottom: 8px;
     min-height: 35px;
-    margin-top: 4px;
     width: 74vw;
+    cursor: pointer;
 }
 
-.radio-group input[type="radio"] {
-    margin-left: 10px;
+
+/* Estilo do ponto do rádio quando selecionado */
+input[type="radio"]:checked + span {
+    border-color: #007bff; /* Cor da borda quando selecionado */
+    background-color: #007bff; /* Cor de fundo quando selecionado */
+}
+
+/* Texto ao lado do radio */
+.radio-group label {
+   padding-right: 0px;
+}
+
+.radio-group input[type="radio"]:checked {
+    background-color: green;
+    color: gold;
 }
 
 div.left-box {
@@ -152,7 +188,7 @@ h1.checkbox-title {
     background-color: rgb(1, 68, 57);
     color: white;
     border-radius: 5px;
-    width: 50%;
+    width: 60%;
     margin: auto;
     margin-top: 15px;
     margin-bottom: -20px;
@@ -163,7 +199,7 @@ h1.checkbox-title {
     display: flex;
 
 
-    font-size: 28px;
+    font-size: 26px;
     margin-bottom: 4px;
  
 }
@@ -176,8 +212,7 @@ h1.checkbox-title {
     font-size: 13px;
     border: 2px solid white;
     padding: 4px;
-    width: 22px;
-    height: 30px;
+    width: 25px;
+    height: 29px;
     border-radius: 50%;
-    
 }

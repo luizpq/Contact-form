@@ -16,6 +16,7 @@ const errorMessage = document.getElementById('error-message')
 const errorCheckBox = document.getElementById('error-check-box')
 // Alert Elements
 const jsAlert = document.querySelector('#js-alert')
+const borderFocus = document.querySelectorAll('.border-radio')
 
 // Functions
 const enviar = (e) => {
@@ -97,6 +98,12 @@ const verificaErro = () => {
 
 function showAlert() {
     jsAlert.classList.remove('hidden')
+}
+
+const inputFocus = () => {
+    if (borderFocus === checked) {
+        
+    }
 }
 
 // Events
