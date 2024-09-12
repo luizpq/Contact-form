@@ -16,7 +16,8 @@ const errorMessage = document.getElementById('error-message')
 const errorCheckBox = document.getElementById('error-check-box')
 // Alert Elements
 const jsAlert = document.querySelector('#js-alert')
-const borderFocus = document.querySelectorAll('.border-radio')
+const radios = document.querySelectorAll('input[type="radio"]')
+const inputFocus = document.querySelectorAll('.border-radio')
 
 // Functions
 const enviar = (e) => {
@@ -65,6 +66,7 @@ const verificaErro = () => {
     let checkedCount = 0
     inputQuery.forEach(radios => {
         if (radios.checked) {
+            borderFocus.classList.add('green-border')
             checkedCount++
         }
     })
@@ -100,11 +102,15 @@ function showAlert() {
     jsAlert.classList.remove('hidden')
 }
 
-const inputFocus = () => {
-    if (borderFocus === checked) {
-        
-    }
-}
-
 // Events
 form.addEventListener('submit', enviar);
+
+
+radios.forEach(radio => {
+
+
+    if (radio.checked) {
+        inputFocus.classList.add('green-border')
+    }
+    
+})

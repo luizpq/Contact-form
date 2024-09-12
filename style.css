@@ -62,6 +62,15 @@ input[type="radio"] {
    display: none;
 }
 
+.border-radio input[type="radio"]:checked + span {
+    background: green;
+    border-color: green;
+}
+
+.green-border {
+    border: 1.5px solid green;
+}
+
 .radio-group {
     display: flex;
     flex-flow: column nowrap;
@@ -95,21 +104,9 @@ input[type="radio"] {
     cursor: pointer;
 }
 
-
-/* Estilo do ponto do rádio quando selecionado */
-input[type="radio"]:checked + span {
-    border-color: #007bff; /* Cor da borda quando selecionado */
-    background-color: #007bff; /* Cor de fundo quando selecionado */
-}
-
 /* Texto ao lado do radio */
 .radio-group label {
    padding-right: 0px;
-}
-
-.radio-group input[type="radio"]:checked {
-    background-color: green;
-    color: gold;
 }
 
 div.left-box {
@@ -149,6 +146,7 @@ textarea {
     margin: auto;
     resize: none;
     border-radius: 5px;
+    border: 1.5px solid rgb(100, 99, 99);
 }
 
 div.msgerro {
