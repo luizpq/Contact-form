@@ -144,9 +144,7 @@ function clearError() {
                 error.textContent = ''
             }
         })
-    })
-
-   
+    })  
 }
 
 document.addEventListener('input', clearError)
