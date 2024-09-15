@@ -63,8 +63,22 @@ const verificaErro = () => {
         temErro = true
     }
 
-  
-  
+        // Check inputRadio
+
+        let checkedCount = 0
+        inputQuery.forEach(radios => {
+            if (radios.checked) {
+                checkedCount++
+            }
+        })
+    
+        if (checkedCount < 1) {
+            errorRadio.textContent = 'Please select a query type'
+            temErro = true
+        } else {
+            errorRadio.textContent = ''
+            temErro = false
+        }
 
     // Check inputMessage
 

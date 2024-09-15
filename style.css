@@ -101,7 +101,6 @@ input[type="radio"] {
     margin-bottom: 8px;
     min-height: 35px;
     width: 74vw;
-    cursor: pointer;
 }
 
 .border-checked {
@@ -120,6 +119,9 @@ input[type="radio"] {
 /* Texto ao lado do radio */
 .radio-group label {
    padding-right: 0px;
+   width: 74vw;
+   padding: 5px 0px;
+   cursor: pointer;
 }
 
 div.left-box {
@@ -143,6 +145,7 @@ div.left-box label {
 .center-check-box {
     display: flex;
     flex-wrap: wrap;
+    margin-left: 10px;
 
     height: 100%;
 }
@@ -160,6 +163,10 @@ textarea {
     resize: none;
     border-radius: 5px;
     border: 1.5px solid rgb(100, 99, 99);
+}
+
+.green-textarea {
+    border-color: var(--verde);
 }
 
 div.msgerro {
