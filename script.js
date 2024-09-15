@@ -17,7 +17,12 @@ const errorCheckBox = document.getElementById('error-check-box')
 // Alert Elements
 const jsAlert = document.querySelector('#js-alert')
 const radios = document.querySelectorAll('input[type="radio"]')
-const inputFocus = document.querySelectorAll('.border-radio')
+const radio1 = document.querySelector('#iradio1')
+const radio2 = document.querySelector('#iradio2')
+
+const borderRadio = document.querySelectorAll('.border-radio')
+const radioGroup = document.querySelectorAll('.radio-group')
+
 
 // Functions
 const enviar = (e) => {
@@ -93,10 +98,39 @@ const verificaErro = () => {
         errorCheckBox.textContent = 'To submit this form, please consent to being contacted'
         inputCheckBox.classList.add('error-border')
         temErro = true
-    }
-
+    } 
     return !temErro;
 };
+
+
+    // Adiciona a classe 'border-checked' ao label do rádio selecionado
+    const checkSelectedRadio = () => {
+        // Remove a classe 'border-checked' de todos os labels
+    
+               
+            const resetBorder = document.querySelectorAll('.border-radio');
+            resetBorder.forEach(radio => {
+            radio.classList.remove('border-checked');
+           // Adiciona de volta a classe original
+        })
+     
+            inputQuery.forEach(radio => {
+         
+            if (radio.checked) {
+                const associatedLabel = radio.closest('.border-radio');
+                  
+                    associatedLabel.classList.add('border-checked');
+                }
+            });
+        
+}
+    
+    // Adicionar ouvintes de eventos para os botões de rádio
+    inputQuery.forEach(radio => {
+        radio.addEventListener('change', checkSelectedRadio);
+    });
+
+
 
 function showAlert() {
     jsAlert.classList.remove('hidden')
@@ -104,13 +138,3 @@ function showAlert() {
 
 // Events
 form.addEventListener('submit', enviar);
-
-
-radios.forEach(radio => {
-
-
-    if (radio.checked) {
-        inputFocus.classList.add('green-border')
-    }
-    
-})

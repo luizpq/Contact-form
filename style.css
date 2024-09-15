@@ -14,6 +14,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;   
+    
 }
 
 body{
@@ -58,45 +59,59 @@ input:focus {
     border-color: green;
 }
 
-input[type="radio"] {
-   display: none;
-}
-
-.border-radio input[type="radio"]:checked + span {
-    background: green;
+input[type="radio"]:checked + span {
+    background: radial-gradient(circle, green 50%, #fff 50%);
     border-color: green;
+    padding: 4px;
 }
 
 .green-border {
     border: 1.5px solid green;
 }
 
-.radio-group {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    
+input[type="radio"] {
+    display: none;
 }
 
-/* Estilo da borda e do ponto do rádio personalizado */
-.radio-group input[type="radio"] + span {
+.radio-group {
     display: flex;
- 
-    width: 15px;
-    height: 15px;
-    margin-left: 5px;
-    margin-right: -10px;
-    border: 2px solid #ccc; /* Cor padrão da borda */
-    border-radius: 50%; /* Forma circular */
-    background-color: #fff; /* Cor de fundo do círculo */
-    transition: border-color 0.3s; /* Transição suave da cor da borda */
+    flex-flow: column wrap;
+    align-items: center;
 }
+
+
+
+.radio-group input + span{
+    display: flex;
+    
+    width: 18px;
+    height: 18px;
+    margin-left: 20px;
+    margin-right: -10px;
+    border: 2px solid #ccc; 
+    border-radius: 50%; 
+    background-color: #fff; 
+    transition: border-color 0.3s; 
+} 
 
 .border-radio {
     display: flex;
     align-items: center;
 
     border: 1.5px solid  rgb(100, 99, 99);
+    border-radius: 5px;
+    margin-bottom: 8px;
+    min-height: 35px;
+    width: 74vw;
+    cursor: pointer;
+}
+
+.border-checked {
+    display: flex;
+    align-items: center;
+
+    border: 1.5px solid  green;
+    background-color: rgba(255, 228, 196, 0.594);
     border-radius: 5px;
     margin-bottom: 8px;
     min-height: 35px;
