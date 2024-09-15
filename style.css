@@ -40,7 +40,7 @@ section{
     margin: auto;
     margin-top: 20px;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 section label{
@@ -49,8 +49,8 @@ section label{
 }
 
 input {
-    min-height: 35px;
-    border: 1.5px solid rgb(100, 99, 99);
+    min-height: 40px;
+    border: 1.5px solid rgba(100, 99, 99, 0.655);
     border-radius: 5px;
     margin: 8px 0px;
     width: 74vw;
@@ -59,9 +59,10 @@ input {
     outline: none;
 }
 
-input:focus {
+input:focus, input:hover {
     border-color: var(--verde);
 }
+
 
 input[type="radio"]:checked + span {
     background: radial-gradient(circle, var(--verde) 50%, #fff 50%);
@@ -82,11 +83,11 @@ input[type="radio"] {
 .radio-group input + span{
     display: flex;
     
-    width: 18px;
-    height: 18px;
+    width: 15px;
+    height: 15px;
     margin-left: 20px;
     margin-right: -10px;
-    border: 2px solid #ccc; 
+    border: 2px solid #b4b4b4; 
     border-radius: 50%; 
     background-color: #fff; 
     transition: border-color 0.3s; 
@@ -96,10 +97,10 @@ input[type="radio"] {
     display: flex;
     align-items: center;
 
-    border: 1.5px solid  rgb(100, 99, 99);
+    border: 1.5px solid  rgba(100, 99, 99, 0.655);
     border-radius: 5px;
     margin-bottom: 8px;
-    min-height: 35px;
+    min-height: 40px;
     width: 74vw;
 }
 
@@ -118,9 +119,8 @@ input[type="radio"] {
 
 /* Texto ao lado do radio */
 .radio-group label {
-   padding-right: 0px;
    width: 74vw;
-   padding: 5px 0px;
+   margin-top: 6px;
    cursor: pointer;
 }
 
@@ -132,7 +132,7 @@ div.left-box {
 }
 
 div.left-box label {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     margin-left: 18px;
 }
 
@@ -145,8 +145,7 @@ div.left-box label {
 .center-check-box {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 10px;
-
+    margin-left: 2px;
     height: 100%;
 }
 
@@ -162,7 +161,7 @@ textarea {
     margin: auto;
     resize: none;
     border-radius: 5px;
-    border: 1.5px solid rgb(100, 99, 99);
+    border: 1.5px solid rgba(100, 99, 99, 0.655);
 }
 
 .green-textarea {
@@ -190,6 +189,11 @@ div.msgerro {
     cursor: pointer;
 }
 
+#botao:hover {
+    border-color: rgb(6, 93, 75);
+    background-color: rgb(6, 93, 75);
+}
+
 .error-border {
     border: 1px solid rgb(175, 5, 5);
 }
@@ -206,7 +210,7 @@ h1.checkbox-title {
     font-family: "italica", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     background-color: rgb(2, 88, 74);
     color: white;
-    border-radius: 5px;
+    border-radius: 145px;
     width: 60%;
     margin: auto;
     margin-top: 15px;
@@ -217,10 +221,8 @@ h1.checkbox-title {
 .alert-content h1 {
     display: flex;
 
-
     font-size: 26px;
     margin-bottom: 4px;
- 
 }
 
 .alert-content p {
