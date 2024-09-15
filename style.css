@@ -29,8 +29,7 @@ legend{
     font-size: 2em;
     margin-bottom: 10px;
     font-family: "titulo", Arial, Helvetica, sans-serif;
-    margin-left: 15px
-  
+    margin-left: 3.5%;
 }
 
 section{
@@ -75,8 +74,8 @@ input[type="radio"] {
 
 .radio-group {
     display: flex;
-    flex-flow: column wrap;
-    align-items: center;
+    flex-flow: wrap;
+    justify-content: center;
 }
 
 .radio-group input + span{
@@ -126,12 +125,11 @@ div.left-box {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-
 }
 
 div.left-box label {
     margin-bottom: 8px;
-    margin-left: 18px;
+    margin-left: 4%;
 }
 
 .custom-checkbox {
