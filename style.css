@@ -63,7 +63,6 @@ input:focus, input:hover {
     border-color: var(--verde);
 }
 
-
 input[type="radio"]:checked + span {
     background: radial-gradient(circle, var(--verde) 50%, #fff 50%);
     border-color: var(--verde);
@@ -127,7 +126,8 @@ input[type="radio"] {
 div.left-box {
     display: flex;
     flex-direction: column;
-   
+    flex-wrap: wrap;
+
     margin: auto;
 }
 

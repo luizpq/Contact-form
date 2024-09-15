@@ -6,6 +6,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <title>Frontend Mentor | Contact form</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="media-query.css">
   <script src="script.js" defer></script>
  
 </head>
@@ -40,28 +41,28 @@
       <div class="msgerro" id="error-email"></div>
 
       <h1 class="radio-title">Query type *</h1>
-     <div class="radio-group">
-      
- 
-      <div class="border-radio">
-        <input type="radio" name="query" id="iradio1" required>
-        <span></span>
-        <label for="iradio1">
-        General Enquiry
-        </label>
-      </div>
-    </div>
-
-    <div class="radio-group">
-      <div class="border-radio">
-        <input type="radio" name="query" id="iradio2" required>
-        <span></span>
-         <label for="iradio2">
-        Support Request</label>
+     <div class="row-radio">
+       <div class="radio-group">
+       
+        <div class="border-radio">
+          <input type="radio" name="query" id="iradio1" required>
+          <span></span>
+          <label for="iradio1">
+          General Enquiry
+          </label>
         </div>
-      </div>
-
-      <div class="msgerro" id="error-radio"></div>
+           </div>
+       
+           <div class="radio-group">
+        <div class="border-radio">
+          <input type="radio" name="query" id="iradio2" required>
+          <span></span>
+           <label for="iradio2">
+          Support Request</label>
+          </div>
+        </div>
+        <div class="msgerro" id="error-radio"></div>
+     </div>
    
     <label for="imsg">Mensagem *</label>
 
