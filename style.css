@@ -8,6 +8,10 @@
 @font-face {
     font-family: "titulo";
     src: url(fonts/Karla-VariableFont_wght.ttf) format(truetype);
+} 
+
+:root {
+    --verde: rgb(12, 123, 101);
 }
 
 *{
@@ -56,17 +60,13 @@ input {
 }
 
 input:focus {
-    border-color: green;
+    border-color: var(--verde);
 }
 
 input[type="radio"]:checked + span {
-    background: radial-gradient(circle, green 50%, #fff 50%);
-    border-color: green;
+    background: radial-gradient(circle, var(--verde) 50%, #fff 50%);
+    border-color: var(--verde);
     padding: 4px;
-}
-
-.green-border {
-    border: 1.5px solid green;
 }
 
 input[type="radio"] {
@@ -78,8 +78,6 @@ input[type="radio"] {
     flex-flow: column wrap;
     align-items: center;
 }
-
-
 
 .radio-group input + span{
     display: flex;
@@ -110,7 +108,7 @@ input[type="radio"] {
     display: flex;
     align-items: center;
 
-    border: 1.5px solid  green;
+    border: 1.5px solid  var(--verde);
     background-color: rgba(255, 228, 196, 0.594);
     border-radius: 5px;
     margin-bottom: 8px;
@@ -178,10 +176,11 @@ div.msgerro {
     display: flex;
     align-items: center;
 
-    background-color: rgb(12, 123, 101);
+    background-color: var(--verde);
+    border-color: var(--verde);
     color: white;
     padding: 12px 0px;
-    
+    cursor: pointer;
 }
 
 .error-border {
@@ -198,7 +197,7 @@ h1.checkbox-title {
 
 .alert-content {
     font-family: "italica", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    background-color: rgb(1, 68, 57);
+    background-color: rgb(2, 88, 74);
     color: white;
     border-radius: 5px;
     width: 60%;

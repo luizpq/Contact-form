@@ -17,9 +17,6 @@ const errorCheckBox = document.getElementById('error-check-box')
 // Alert Elements
 const jsAlert = document.querySelector('#js-alert')
 const radios = document.querySelectorAll('input[type="radio"]')
-const radio1 = document.querySelector('#iradio1')
-const radio2 = document.querySelector('#iradio2')
-
 const borderRadio = document.querySelectorAll('.border-radio')
 const radioGroup = document.querySelectorAll('.radio-group')
 
@@ -66,23 +63,8 @@ const verificaErro = () => {
         temErro = true
     }
 
-    // Check inputRadio
-
-    let checkedCount = 0
-    inputQuery.forEach(radios => {
-        if (radios.checked) {
-            borderFocus.classList.add('green-border')
-            checkedCount++
-        }
-    })
-
-    if (checkedCount < 1) {
-        errorRadio.textContent = 'Please select a query type'
-        temErro = true
-    } else {
-        errorRadio.textContent = ''
-        temErro = false
-    }
+  
+  
 
     // Check inputMessage
 
@@ -102,35 +84,31 @@ const verificaErro = () => {
     return !temErro;
 };
 
+     // Check inputRadio
 
-    // Adiciona a classe 'border-checked' ao label do rádio selecionado
-    const checkSelectedRadio = () => {
-        // Remove a classe 'border-checked' de todos os labels
-    
-               
-            const resetBorder = document.querySelectorAll('.border-radio');
-            resetBorder.forEach(radio => {
-            radio.classList.remove('border-checked');
-           // Adiciona de volta a classe original
-        })
-     
-            inputQuery.forEach(radio => {
-         
-            if (radio.checked) {
-                const associatedLabel = radio.closest('.border-radio');
-                  
-                    associatedLabel.classList.add('border-checked');
-                }
-            });
+const checkSelectedRadio = () => {
+// Remove a classe 'border-checked' de todos os labels
         
-}
-    
-    // Adicionar ouvintes de eventos para os botões de rádio
+    const resetBorder = document.querySelectorAll('.border-radio');
+    resetBorder.forEach(radio => {
+    radio.classList.remove('border-checked');
+    // Adiciona de volta a classe original
+})
+
     inputQuery.forEach(radio => {
-        radio.addEventListener('change', checkSelectedRadio);
+    
+    if (radio.checked) {
+        const associatedLabel = radio.closest('.border-radio');
+            
+            associatedLabel.classList.add('border-checked');
+        }
     });
+}
 
-
+// Adicionar ouvintes de eventos para os botões de rádio
+inputQuery.forEach(radio => {
+radio.addEventListener('change', checkSelectedRadio);
+});
 
 function showAlert() {
     jsAlert.classList.remove('hidden')
