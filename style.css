@@ -85,7 +85,7 @@ input[type="radio"] {
     width: 15.8px;
     height: 15px;
     margin-left: 20px;
-    margin-right: -10px;
+    margin-right: 10px;
     border: 2px solid #b4b4b4; 
     border-radius: 50%; 
     background-color: #fff; 
@@ -119,7 +119,6 @@ input[type="radio"] {
 /* Texto ao lado do radio */
 .radio-group label {
    width: 74vw;
-   margin-top: 6px;
    cursor: pointer;
 }
 
@@ -128,7 +127,6 @@ div.left-box {
     flex-direction: column;
     flex-wrap: wrap;
 
-    margin: auto;
 }
 
 div.left-box label {
