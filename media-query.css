@@ -55,3 +55,17 @@
         margin-left: 5.3%;
     }
 }
+
+@media screen and (min-width: 992px) {
+    legend {
+        margin-left: 6.7%;
+    }
+
+    .left-media-query {
+        margin-left: 7%;
+    }
+
+    .left-error {
+        margin-right: 69%;
+    }
+}
