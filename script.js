@@ -6,7 +6,7 @@ const inputLastName = document.getElementById('isobre');
 const inputEmail = document.getElementById('iemail');
 const inputQuery = document.querySelectorAll('input[name="query"]')
 const inputMessage = document.getElementById('imsg')
-const inputCheckBox = document.getElementById('iaceitar')
+const inputCheckBox = document.getElementById('checkbox')
 // Error Div
 const errorName = document.getElementById('error-name');
 const errorLastName = document.getElementById('error-last-name');
@@ -19,7 +19,8 @@ const jsAlert = document.querySelector('#js-alert')
 const radios = document.querySelectorAll('input[type="radio"]')
 const borderRadio = document.querySelectorAll('.border-radio')
 const radioGroup = document.querySelectorAll('.radio-group')
-
+const inputs = [inputLastName, inputEmail, inputName, inputMessage, inputQuery, inputCheckBox]
+const errors = [errorCheckBox, errorEmail, errorLastName,  errorName, errorRadio, errorMessage]
 
 // Functions
 const enviar = (e) => {
@@ -40,6 +41,12 @@ const verificaErro = () => {
     errorRadio.textContent = ''
     errorCheckBox.textContent = ''
     errorMessage.textContent = ''
+
+    inputCheckBox.classList.remove('error-border')
+    inputName.classList.remove('error-border')
+    inputLastName.classList.remove('error-border')
+    inputEmail.classList.remove('error-border')
+    inputMessage.classList.remove('error-border')
 
     // Check inputName
     if (inputName.value.trim() === '') {
@@ -123,6 +130,26 @@ const checkSelectedRadio = () => {
 inputQuery.forEach(radio => {
 radio.addEventListener('change', checkSelectedRadio);
 });
+
+// Verifica se o input está vazio
+
+function clearError() {
+    inputs.forEach(input => {
+        if (input != '') {
+            input.classList.remove('error-border')
+        }
+
+        errors.forEach(error => {
+            if (input != '') {
+                error.textContent = ''
+            }
+        })
+    })
+
+   
+}
+
+document.addEventListener('input', clearError)
 
 function showAlert() {
     jsAlert.classList.remove('hidden')

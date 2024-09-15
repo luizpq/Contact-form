@@ -39,12 +39,12 @@
       <input type="email" name="email" id="iemail" required autocomplete="email">
       <div class="msgerro" id="error-email"></div>
 
-      <h1 class="checkbox-title">Query type *</h1>
+      <h1 class="radio-title">Query type *</h1>
      <div class="radio-group">
       
  
       <div class="border-radio">
-        <input class="checkbox" type="radio" name="query" id="iradio1" required>
+        <input type="radio" name="query" id="iradio1" required>
         <span></span>
         <label for="iradio1">
         General Enquiry
@@ -54,7 +54,7 @@
 
     <div class="radio-group">
       <div class="border-radio">
-        <input class="checkbox" type="radio" name="query" id="iradio2" required>
+        <input type="radio" name="query" id="iradio2" required>
         <span></span>
          <label for="iradio2">
         Support Request</label>
@@ -71,13 +71,10 @@
 
     </div>
 
-      <div class="center-check-box">
-    <label for="iaceitar">
-      <input class="checkbox" type="checkbox" name="aceitar" id="iaceitar" required>
-      consent to being contacted by the team *
-    </label>
+    <input type="checkbox" id="checkbox" class="custom-checkbox">
+    <label for="checkbox">I consent to being contacted by the team *</label>
+
     <div class="msgerro" id="error-check-box"></div> 
-  </div>
 
   <p>
     <input type="submit" value="Submit" id="botao"></input>

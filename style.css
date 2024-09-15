@@ -54,7 +54,7 @@ input {
     border-radius: 5px;
     margin: 8px 0px;
     width: 74vw;
-    padding-left: 4px;
+    padding-left: 8px;
     margin: auto;
     outline: none;
 }
@@ -83,7 +83,7 @@ input[type="radio"] {
 .radio-group input + span{
     display: flex;
     
-    width: 15px;
+    width: 15.8px;
     height: 15px;
     margin-left: 20px;
     margin-right: -10px;
@@ -109,10 +109,10 @@ input[type="radio"] {
     align-items: center;
 
     border: 1.5px solid  var(--verde);
-    background-color: rgba(255, 228, 196, 0.594);
+    background-color: #DFF1E7;
     border-radius: 5px;
     margin-bottom: 8px;
-    min-height: 35px;
+    min-height: 40px;
     width: 74vw;
     cursor: pointer;
 }
@@ -136,23 +136,49 @@ div.left-box label {
     margin-left: 18px;
 }
 
-.checkbox{
-    width: 15px;
-    max-height: 20px;
-    margin-right: 5px;
+.custom-checkbox {
+    display: none;
 }
 
-.center-check-box {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 2px;
-    height: 100%;
-}
-
-.center-check-box label {
-    display: flex;
+/* Estilo para o label que atuará como o checkbox */
+.custom-checkbox + label {
+    display: inline-flex;
     align-items: center;
-   
+    cursor: pointer;
+    position: relative;
+    padding-left: 30px; /* Espaço para o ícone do checkbox */
+    line-height: 20px;
+    margin-top: 5px;
+}
+
+/* Cria o quadrado do checkbox */
+.custom-checkbox + label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 13.5px;
+    height: 14px;
+    border: 1.5px solid rgba(100, 99, 99, 0.655);
+    border-radius: 2px; /* Canto arredondado */
+    background-color: #fff; /* Cor de fundo do checkbox */
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Estilo quando o checkbox está marcado */
+.custom-checkbox:checked + label::before {
+    background-color: var(--verde); /* Cor de fundo quando marcado */
+    border-color: var(--verde); /* Cor da borda quando marcado */
+}
+
+/* Estilo do ícone de marcação */
+.custom-checkbox:checked + label::after {
+    content: '✔'; /* Símbolo de marcação */
+    position: absolute;
+    left: 2px;
+    top: 0;
+    color: #fff; /* Cor do símbolo */
+    font-size: 16px;
 }
 
 textarea {
@@ -198,7 +224,7 @@ div.msgerro {
     border: 1px solid rgb(175, 5, 5);
 }
 
-h1.checkbox-title {
+h1.radio-title {
     font-size: 16px;
     font-weight: normal;
     font-family: "italica", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -210,7 +236,7 @@ h1.checkbox-title {
     font-family: "italica", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     background-color: rgb(2, 88, 74);
     color: white;
-    border-radius: 145px;
+    border-radius: 12px;
     width: 60%;
     margin: auto;
     margin-top: 15px;
