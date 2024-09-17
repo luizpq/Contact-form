@@ -120,8 +120,9 @@ const checkSelectedRadio = () => {
     
     if (radio.checked) {
         const associatedLabel = radio.closest('.border-radio');
-            
+            if (associatedLabel) {
             associatedLabel.classList.add('border-checked');
+            }
         }
     });
 }

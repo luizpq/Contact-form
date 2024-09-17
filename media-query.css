@@ -7,6 +7,19 @@
         gap: 5px;
     }
 
+    .alert-content {
+        width: 50%;
+        padding: 25px;
+    }
+
+    .alert-content h1 {
+        font-size: 32px;
+    }
+
+    .alert-content p {
+        font-size: 18px;
+    }
+
     div.left-box label {
         margin-bottom: 8px;
         margin-left: 0px;
@@ -25,11 +38,17 @@
         margin: 0px;
     }
 
-    
+    input[type="radio"]:checked + span {
+        background: radial-gradient(circle, var(--verde) 50%, #fff 50%);
+        border-color: var(--verde);
+        padding: 4px;
+        
+    }
 
     .radio-group input + span {
         height: 15px;
-        width: 25px;
+        width: 15px;
+        padding: 4px;
     }
 
     .left-box {
@@ -59,6 +78,25 @@
 @media screen and (min-width: 992px) {
     legend {
         margin-left: 6.7%;
+    }
+
+    .alert-content {
+        width: 32%;
+        padding: 25px;
+    }
+
+    .alert-content h1 {
+        font-size: 32px;
+    }
+
+    .alert-content p {
+        font-size: 18px;
+    }
+
+    .radio-group input + span {
+        height: 15px;
+        width: 15px;
+        padding: 4px;
     }
 
     .left-media-query {

@@ -14,18 +14,17 @@
     --verde: rgb(12, 123, 101);
 }
 
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;   
-    
 }
 
-body{
+body {
     background-color:  #E2F1E7;
 }
 
-legend{
+legend {
     font-size: 2em;
     margin-bottom: 10px;
     font-family: "titulo", Arial, Helvetica, sans-serif;
@@ -44,7 +43,6 @@ section{
 
 section label{
    font-family: "italica", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-   
 }
 
 input {
@@ -74,7 +72,6 @@ input[type="radio"] {
 
 .radio-group {
     display: flex;
-    flex-flow: wrap;
     justify-content: center;
 }
 
@@ -139,12 +136,11 @@ div.left-box label {
 /* Estilo para o label que atuará como o checkbox */
 .custom-checkbox + label {
     display: inline-flex;
-    align-items: center;
-    cursor: pointer;
     position: relative;
     padding-left: 30px; /* Espaço para o ícone do checkbox */
     line-height: 20px;
     margin-top: 5px;
+    cursor: pointer;
 }
 
 /* Cria o quadrado do checkbox */
@@ -193,7 +189,7 @@ textarea {
 div.msgerro {
     color: rgb(209, 3, 3);
     margin: 8px 0px;
-    margin-left: 17.5px;
+    margin-left: 6%;
 }
 
 .hidden {
@@ -225,7 +221,7 @@ h1.radio-title {
     font-weight: normal;
     font-family: "italica", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin-bottom: 8px;
-    margin-left: 18px;
+    margin-left: 4%;
 }
 
 .alert-content {

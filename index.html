@@ -12,94 +12,93 @@
 </head>
 <body>
 
-  <div class="alert hidden" id="js-alert">
-      <div class="alert-content">
-        <h1> <span class="emoji">&#x2714;</span> Message Sent!</h1>
-        <p>Thanks for completing the form. We'll be in touch soon!</p>
-      </div>
+<div class="alert hidden" id="js-alert">
+    <div class="alert-content">
+      <h1> <span class="emoji">&#x2714;</span> Message Sent!</h1>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+</div>
 
-  </div>
+  
 
-  <section>
+<section>
 
   <legend>Contact Us</legend>
   <form action="cadastro.php" autocomplete="on" method="post" novalidate>
 
     
 
-        <div class="row-border">
-          <div class="left-box">
-            <label for="inome">
-              First Name *
-            </label>
-              <input type="text" name="nome" id="inome" required autocomplete="name">
-            <div class="msgerro" id="error-name"></div>
-          </div>
-        
-            <div class="left-box">
-              <label for="isobre">Last Name *</label>
-              <input type="text" name="sobre" id="isobre" required autocomplete="name">
-              <div class="msgerro" id="error-last-name"></div>
-            </div>
-        
-            </div>
-        
-        <div class="left-box">
-          <label for="iemail">Email Address *</label>
-          <input type="email" name="email" id="iemail" required autocomplete="email">
-          <div class="msgerro" id="error-email"></div>
-        </div>
+  <div class="row-border">
+    <div class="left-box">
+      <label for="inome">
+        First Name *
+      </label>
+        <input type="text" name="nome" id="inome" required autocomplete="name">
+      <div class="msgerro" id="error-name"></div>
+  </div>
+
+  <div class="left-box">
+    <label for="isobre">Last Name *</label>
+    <input type="text" name="sobre" id="isobre" required autocomplete="name">
+    <div class="msgerro" id="error-last-name"></div>
+  </div>
+  </div>
+   
+
+  <div class="left-box">
+    <label for="iemail">Email Address *</label>
+    <input type="email" name="email" id="iemail" required autocomplete="email">
+    <div class="msgerro" id="error-email"></div>
+  </div>
 
 
-        <h1 class="radio-title">Query type *</h1>
-        <div class="row-border">
-         <div class="radio-group">
-          <div class="border-radio">
-            <input type="radio" name="query" id="iradio1" required>
-            <span></span>
-            <label for="iradio1">
-            General Enquiry
-            </label>
-          </div>
-             </div>
+  <h1 class="radio-title">Query type *</h1>
+  <div class="row-border">
+    <div class="radio-group">
+    <div class="border-radio">
+      <input type="radio" name="query" id="iradio1" required>
+      <span></span>
+      <label for="iradio1">
+      General Enquiry
+      </label>
+    </div>
+  </div>
       
        
-           <div class="radio-group">
-        <div class="border-radio">
-          <input type="radio" name="query" id="iradio2" required>
-          <span></span>
-           <label for="iradio2">
-          Support Request</label>
-          </div>
-        </div>
-        <div class="left-error">
-          <div class="msgerro" id="error-radio"></div>
-        </div>
-     </div>
-   
-    <div class="left-box">
-      <label for="imsg">Mensagem *</label>
-      <textarea name="" id="imsg" cols="19" rows="12"></textarea>
-      <div class="msgerro" id="error-message"></div>
-      <div>
-    </div>
-
-    </div>
-
-    <div class="left-media-query">
-      <div class="left-box">
-        <input type="checkbox" id="checkbox" class="custom-checkbox">
-        <label for="checkbox">I consent to being contacted by the team *</label>
-        <div class="msgerro" id="error-check-box"></div>
+  <div class="radio-group">
+    <div class="border-radio">
+      <input type="radio" name="query" id="iradio2" required>
+      <span></span>
+        <label for="iradio2">
+      Support Request</label>
       </div>
     </div>
+    <div class="left-error">
+      <div class="msgerro" id="error-radio"></div>
+    </div>
+  </div>
+
+  <div class="left-box">
+    <label for="imsg">Mensagem *</label>
+    <textarea name="" id="imsg" cols="19" rows="12"></textarea>
+    <div class="msgerro" id="error-message"></div>
+    </div>
+  </div>
+
+  <div class="left-media-query">
+    <div class="left-box">
+    <input type="checkbox" id="checkbox" class="custom-checkbox">
+    <label for="checkbox">I consent to being contacted by the team *</label>
+    <div class="msgerro" id="error-check-box"></div>
+    </div>
+  </div>
 
   <p>
     <input type="submit" value="Submit" id="botao"></input>
   </p>
   </form>
 
-  </section>
+</section>
 
 </body>
 </html>
